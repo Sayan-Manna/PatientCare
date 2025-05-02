@@ -29,7 +29,7 @@ public class PatientController {
         this.patientService = patientService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     @Operation(summary = "Get all patients", description = "Retrieve a list of all patients")
     public ResponseEntity<List<PatientResponseDTO>> getPatients() {
         return ResponseEntity.ok(patientService.getPatients());
